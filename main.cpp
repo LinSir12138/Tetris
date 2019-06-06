@@ -6,7 +6,7 @@
 #include "Shap.h"
 using namespace std;
 
-
+// Change MainUI
 int main(void)
 {
 	//PlaySound(TEXT("D:\\music\\shiji.wav"), NULL, SND_FILENAME | SND_ASYNC);  flase
@@ -17,31 +17,31 @@ int main(void)
 	//Tetris tetirs;
 	Shap shap;
 
-	//whileÑ­»·1
+	//whileå¾ªçŽ¯1
 	while (true)
 	{
 
 		cout << "44444444`````" << endl;
-		shap.mainUI();		//¼ÓÔØÑ¡Ôñ½çÃæ
+		shap.mainUI();		//åŠ è½½é€‰æ‹©ç•Œé¢
 		cout << "5555555" << endl;
-		//¿ìËÙ¿ªÊ¼ÓÎÏ·
+		//å¿«é€Ÿå¼€å§‹æ¸¸æˆ
 		if (shap.getFlag() == "Just StartGame") {
 			//tetirs.justStartGame('T', 0);
 			int ch;
 			bool ifgameover;
 
-			//whileÑ­»·2
+			//whileå¾ªçŽ¯2
 			while (true)
 			{
-				shap.Initialization();		//³õÊ¼»¯»æÍ¼´°¿Ú£¬·ÖÊýµÈ
-				shap.random1();		//Ëæ»úÉú³É·½¿é±àºÅ number ºÍ ÑÕÉ« color
+				shap.Initialization();		//åˆå§‹åŒ–ç»˜å›¾çª—å£ï¼Œåˆ†æ•°ç­‰
+				shap.random1();		//éšæœºç”Ÿæˆæ–¹å—ç¼–å· number å’Œ é¢œè‰² color
 				shap.color2 = shap.color1;
 				shap.blockColor2 = shap.blockColor1;
 				shap.blockNumber2 = shap.blockNumber1;
-				//whileÑ­»·3
+				//whileå¾ªçŽ¯3
 				while (true)
 				{
-					bool ifGameUIChooseBack = false;		//ÔÚÓÎÏ·½çÃæÊ±£¬ÊÇ·ñÑ¡ÔñÁË·µ»Ø£¨ÔÚÓÎÏ·ÖÐÍ¾·µ»ØÖ÷½çÃæ£©
+					bool ifGameUIChooseBack = false;		//åœ¨æ¸¸æˆç•Œé¢æ—¶ï¼Œæ˜¯å¦é€‰æ‹©äº†è¿”å›žï¼ˆåœ¨æ¸¸æˆä¸­é€”è¿”å›žä¸»ç•Œé¢ï¼‰
 					shap.color1 = shap.color2;
 					shap.blockColor1 = shap.blockColor2;
 					shap.blockNumber1 = shap.blockNumber2;
@@ -52,17 +52,17 @@ int main(void)
 					if (ifgameover == true)
 					{
 						shap.gameOverUI();
-						//Ñ¡Ôñ"¼ÌÐøÓÎÏ·"
+						//é€‰æ‹©"ç»§ç»­æ¸¸æˆ"
 						if (shap.gameoverChooseFlag == 1)
 						{
-							graphdefaults();		//³õÊ¼»¯»æÍ¼Òò×ÓÒòÎªÖ®Ç°¸Ä±äÁËÔ­µã×ø±ê£¬¶ÔºóÐø»æÍ¼¿ÉÄÜ»á²úÉúÓ°Ïì
-							break;		//Ìø³öÑ­»·3
+							graphdefaults();		//åˆå§‹åŒ–ç»˜å›¾å› å­å› ä¸ºä¹‹å‰æ”¹å˜äº†åŽŸç‚¹åæ ‡ï¼Œå¯¹åŽç»­ç»˜å›¾å¯èƒ½ä¼šäº§ç”Ÿå½±å“
+							break;		//è·³å‡ºå¾ªçŽ¯3
 						}
-						//Ñ¡Ôñ¡°·µ»Ø¡±
+						//é€‰æ‹©â€œè¿”å›žâ€
 						else if (shap.gameoverChooseFlag == 2)
 						{
 							cout << "22222~~~~~" << endl;
-							break;		//Ìø³öÑ­»·3
+							break;		//è·³å‡ºå¾ªçŽ¯3
 						}
 					}
 
@@ -82,21 +82,21 @@ int main(void)
 							}
 
 						}
-						//Èç¹ûÓÐÒ»¸ö¼ü°´ÏÂÁË£¬Ôò_kbhitº¯Êý·µ»ØÒ»¸ö·Ç0Öµ£¬·ñÔò·µ»Ø0
+						//å¦‚æžœæœ‰ä¸€ä¸ªé”®æŒ‰ä¸‹äº†ï¼Œåˆ™_kbhitå‡½æ•°è¿”å›žä¸€ä¸ªéž0å€¼ï¼Œå¦åˆ™è¿”å›ž0
 						if (_kbhit())
 						{
 							ch = _getch();
 							cout << ch << endl;
-							//°´ÏÂA£¬×óÒÆ
+							//æŒ‰ä¸‹Aï¼Œå·¦ç§»
 							if (ch == 75 || ch == 97) {
 								shap.move(1, shap.getNumber(), shap.nowX, shap.nowY);
 							}
-							//°´ÏÂD£¬ÓÒÒÆ
+							//æŒ‰ä¸‹Dï¼Œå³ç§»
 							else if (ch == 77 || ch == 100)
 							{
 								shap.move(2, shap.getNumber(), shap.nowX, shap.nowY);
 							}
-							//°´ÏÂW£¬·­×ª
+							//æŒ‰ä¸‹Wï¼Œç¿»è½¬
 							else if (ch == 72 || ch == 119)
 							{
 								shap.turn(shap.getNumber(), shap.nowX, shap.nowY);
@@ -111,14 +111,14 @@ int main(void)
 									break;
 								}
 							}
-							//ÔÝÍ££¬ÓÃ»§°´ÏÂ p ¼üÊ±ÔÝÍ£
+							//æš‚åœï¼Œç”¨æˆ·æŒ‰ä¸‹ p é”®æ—¶æš‚åœ
 							else if (ch == 112)
 							{
 								while (true)
 								{
-									settextcolor(0xFF5555);		//ÁÁÀ¶É«
-									settextstyle(20, 15, _T("ËÎÌå"), 0, 0, FW_EXTRABOLD, false, false, false);		//ÉèÖÃ×ÖÌåÑùÊ½£º³¤£¬¿í£¬×ÖÌåÃû³Æ£¬//ÓÐ3¸öÖØÔØº¯Êý
-									outtextxy(550, 710, _T("ÔÝÍ£ÖÐ¡¤¡¤¡¤"));
+									settextcolor(0xFF5555);		//äº®è“è‰²
+									settextstyle(20, 15, _T("å®‹ä½“"), 0, 0, FW_EXTRABOLD, false, false, false);		//è®¾ç½®å­—ä½“æ ·å¼ï¼šé•¿ï¼Œå®½ï¼Œå­—ä½“åç§°ï¼Œ//æœ‰3ä¸ªé‡è½½å‡½æ•°
+									outtextxy(550, 710, _T("æš‚åœä¸­Â·Â·Â·"));
 									ch = _getch();
 									if (ch == 112)
 									{
@@ -128,19 +128,19 @@ int main(void)
 									}
 								}
 							}
-							//°´ÏÂ B ¼ü£¬±íÊ¾·µ»Ø
+							//æŒ‰ä¸‹ B é”®ï¼Œè¡¨ç¤ºè¿”å›ž
 							else if (ch == 98)
 							{
 								HWND hwnd1;
 								int i;
-								hwnd1 = GetHWnd(); // »ñÈ¡µ±Ç°´°¿Ú¾ä±ú
-								// ½«±äÁ¿Öµ¸ñÊ½»¯Ð´Èëµ½ÖÐ¼ä±äÁ¿ s ÖÐ£¬ _T("")ÊÇ unicode µÄÓÃ·¨
-								i = MessageBox(hwnd1, _T("È·¶¨Òª·µ»ØÖ÷½çÃæÂð£¿"), _T("·µ»Ø"), MB_OKCANCEL | MB_ICONQUESTION);
+								hwnd1 = GetHWnd(); // èŽ·å–å½“å‰çª—å£å¥æŸ„
+								// å°†å˜é‡å€¼æ ¼å¼åŒ–å†™å…¥åˆ°ä¸­é—´å˜é‡ s ä¸­ï¼Œ _T("")æ˜¯ unicode çš„ç”¨æ³•
+								i = MessageBox(hwnd1, _T("ç¡®å®šè¦è¿”å›žä¸»ç•Œé¢å—ï¼Ÿ"), _T("è¿”å›ž"), MB_OKCANCEL | MB_ICONQUESTION);
 								if (i == 1)
 								{
-									ifGameUIChooseBack = true;		//Ñ¡ÔñÁË·µ»Ø
-									shap.gameoverChooseFlag = 2;		//Í¬Ê±Ò²±íÊ¾ÁËÓÎÏ·½áÊø£¬ËùÒÔ¸³ÖµÎª2£¬²ÅÄÜÌø³öÑ­»·2
-									graphdefaults();		//ÒòÎªÔÚÓÎÏ·½çÃæÊ±£¬¸ü¸ÄÁË×ø±êÔ­µã£¬·µ»ØÖ÷½çÃæÊ±£¬Òª»Ö¸´×ø±êÔ­µã
+									ifGameUIChooseBack = true;		//é€‰æ‹©äº†è¿”å›ž
+									shap.gameoverChooseFlag = 2;		//åŒæ—¶ä¹Ÿè¡¨ç¤ºäº†æ¸¸æˆç»“æŸï¼Œæ‰€ä»¥èµ‹å€¼ä¸º2ï¼Œæ‰èƒ½è·³å‡ºå¾ªçŽ¯2
+									graphdefaults();		//å› ä¸ºåœ¨æ¸¸æˆç•Œé¢æ—¶ï¼Œæ›´æ”¹äº†åæ ‡åŽŸç‚¹ï¼Œè¿”å›žä¸»ç•Œé¢æ—¶ï¼Œè¦æ¢å¤åæ ‡åŽŸç‚¹
 									break;
 								}
 								else if (i == 2)
@@ -148,7 +148,7 @@ int main(void)
 								}
 							}
 
-							//×¢£»ÉÏÏÂ×óÓÒ¶ÔÓ¦µÄch ·Ö±ðÎª£º72£¬ 80,75,77£¬AWDS ¶ÔÓ¦µÄ ASCIIÂë·Ö±ðÎª£º97,119,100£¬115
+							//æ³¨ï¼›ä¸Šä¸‹å·¦å³å¯¹åº”çš„ch åˆ†åˆ«ä¸ºï¼š72ï¼Œ 80,75,77ï¼ŒAWDS å¯¹åº”çš„ ASCIIç åˆ†åˆ«ä¸ºï¼š97,119,100ï¼Œ115
 						}
 						Sleep(80);
 					}
@@ -158,21 +158,21 @@ int main(void)
 					}
 				}
 
-				//µ±¸ÃgameoverChoosegflagÎª 2 Ê±£¬±íÊ¾Ñ¡ÔñÁË·µ»Ø£¨·µ»ØÖ÷½çÃæ£©
+				//å½“è¯¥gameoverChoosegflagä¸º 2 æ—¶ï¼Œè¡¨ç¤ºé€‰æ‹©äº†è¿”å›žï¼ˆè¿”å›žä¸»ç•Œé¢ï¼‰
 				if (shap.gameoverChooseFlag == 2)
 				{
 					cout << "`11111111```````" << endl;
-					break;		//Ìø³öÑ­»·2
+					break;		//è·³å‡ºå¾ªçŽ¯2
 				}
 			}
 			cout << "3333333~~~~~~" << endl;
 		}
-		//×¢²áÕËºÅ
+		//æ³¨å†Œè´¦å·
 		else if (shap.getFlag() == "Register")
 		{
 			shap.myRegister();
 		}
-		//µÇÂ¼ÓÎÏ·
+		//ç™»å½•æ¸¸æˆ
 		else if (shap.getFlag() == "Log in")
 		{
 			index = shap.myLogIn();
@@ -181,19 +181,19 @@ int main(void)
 				int ch;
 				bool ifgameover;
 
-				//whileÑ­»·2
+				//whileå¾ªçŽ¯2
 				while (true)
 				{
-					shap.Initialization();		//³õÊ¼»¯»æÍ¼´°¿Ú£¬·ÖÊý,ÓÃ»§ÏÂ±ê
+					shap.Initialization();		//åˆå§‹åŒ–ç»˜å›¾çª—å£ï¼Œåˆ†æ•°,ç”¨æˆ·ä¸‹æ ‡
 					shap.accountIndex = index;
-					shap.random1();		//Ëæ»úÉú³É·½¿é±àºÅ number ºÍ ÑÕÉ« color
+					shap.random1();		//éšæœºç”Ÿæˆæ–¹å—ç¼–å· number å’Œ é¢œè‰² color
 					shap.color2 = shap.color1;
 					shap.blockColor2 = shap.blockColor1;
 					shap.blockNumber2 = shap.blockNumber1;
-					//whileÑ­»·3
+					//whileå¾ªçŽ¯3
 					while (true)
 					{
-						bool ifGameUIChooseBack = false;		//ÔÚÓÎÏ·½çÃæÊ±£¬ÊÇ·ñÑ¡ÔñÁË·µ»Ø£¨ÔÚÓÎÏ·ÖÐÍ¾·µ»ØÖ÷½çÃæ£©
+						bool ifGameUIChooseBack = false;		//åœ¨æ¸¸æˆç•Œé¢æ—¶ï¼Œæ˜¯å¦é€‰æ‹©äº†è¿”å›žï¼ˆåœ¨æ¸¸æˆä¸­é€”è¿”å›žä¸»ç•Œé¢ï¼‰
 						shap.color1 = shap.color2;
 						shap.blockColor1 = shap.blockColor2;
 						shap.blockNumber1 = shap.blockNumber2;
@@ -204,17 +204,17 @@ int main(void)
 						if (ifgameover == true)
 						{
 							shap.gameOverUI();
-							//Ñ¡Ôñ"¼ÌÐøÓÎÏ·"
+							//é€‰æ‹©"ç»§ç»­æ¸¸æˆ"
 							if (shap.gameoverChooseFlag == 1)
 							{
-								graphdefaults();		//³õÊ¼»¯»æÍ¼Òò×ÓÒòÎªÖ®Ç°¸Ä±äÁËÔ­µã×ø±ê£¬¶ÔºóÐø»æÍ¼¿ÉÄÜ»á²úÉúÓ°Ïì
-								break;		//Ìø³öÑ­»·3
+								graphdefaults();		//åˆå§‹åŒ–ç»˜å›¾å› å­å› ä¸ºä¹‹å‰æ”¹å˜äº†åŽŸç‚¹åæ ‡ï¼Œå¯¹åŽç»­ç»˜å›¾å¯èƒ½ä¼šäº§ç”Ÿå½±å“
+								break;		//è·³å‡ºå¾ªçŽ¯3
 							}
-							//Ñ¡Ôñ¡°·µ»Ø¡±
+							//é€‰æ‹©â€œè¿”å›žâ€
 							else if (shap.gameoverChooseFlag == 2)
 							{
 								cout << "22222~~~~~" << endl;
-								break;		//Ìø³öÑ­»·3
+								break;		//è·³å‡ºå¾ªçŽ¯3
 							}
 						}
 
@@ -234,21 +234,21 @@ int main(void)
 								}
 
 							}
-							//Èç¹ûÓÐÒ»¸ö¼ü°´ÏÂÁË£¬Ôò_kbhitº¯Êý·µ»ØÒ»¸ö·Ç0Öµ£¬·ñÔò·µ»Ø0
+							//å¦‚æžœæœ‰ä¸€ä¸ªé”®æŒ‰ä¸‹äº†ï¼Œåˆ™_kbhitå‡½æ•°è¿”å›žä¸€ä¸ªéž0å€¼ï¼Œå¦åˆ™è¿”å›ž0
 							if (_kbhit())
 							{
 								ch = _getch();
 								cout << ch << endl;
-								//°´ÏÂA£¬×óÒÆ
+								//æŒ‰ä¸‹Aï¼Œå·¦ç§»
 								if (ch == 75 || ch == 97) {
 									shap.move(1, shap.getNumber(), shap.nowX, shap.nowY);
 								}
-								//°´ÏÂD£¬ÓÒÒÆ
+								//æŒ‰ä¸‹Dï¼Œå³ç§»
 								else if (ch == 77 || ch == 100)
 								{
 									shap.move(2, shap.getNumber(), shap.nowX, shap.nowY);
 								}
-								//°´ÏÂW£¬·­×ª
+								//æŒ‰ä¸‹Wï¼Œç¿»è½¬
 								else if (ch == 72 || ch == 119)
 								{
 									shap.turn(shap.getNumber(), shap.nowX, shap.nowY);
@@ -263,14 +263,14 @@ int main(void)
 										break;
 									}
 								}
-								//ÔÝÍ££¬ÓÃ»§°´ÏÂ p ¼üÊ±ÔÝÍ£
+								//æš‚åœï¼Œç”¨æˆ·æŒ‰ä¸‹ p é”®æ—¶æš‚åœ
 								else if (ch == 112)
 								{
 									while (true)
 									{
-										settextcolor(0xFF5555);		//ÁÁÀ¶É«
-										settextstyle(20, 15, _T("ËÎÌå"), 0, 0, FW_EXTRABOLD, false, false, false);		//ÉèÖÃ×ÖÌåÑùÊ½£º³¤£¬¿í£¬×ÖÌåÃû³Æ£¬//ÓÐ3¸öÖØÔØº¯Êý
-										outtextxy(550, 710, _T("ÔÝÍ£ÖÐ¡¤¡¤¡¤"));
+										settextcolor(0xFF5555);		//äº®è“è‰²
+										settextstyle(20, 15, _T("å®‹ä½“"), 0, 0, FW_EXTRABOLD, false, false, false);		//è®¾ç½®å­—ä½“æ ·å¼ï¼šé•¿ï¼Œå®½ï¼Œå­—ä½“åç§°ï¼Œ//æœ‰3ä¸ªé‡è½½å‡½æ•°
+										outtextxy(550, 710, _T("æš‚åœä¸­Â·Â·Â·"));
 										ch = _getch();
 										if (ch == 112)
 										{
@@ -280,26 +280,26 @@ int main(void)
 										}
 									}
 								}
-								//°´ÏÂ B ¼ü£¬±íÊ¾·µ»Ø
+								//æŒ‰ä¸‹ B é”®ï¼Œè¡¨ç¤ºè¿”å›ž
 								else if (ch == 98)
 								{
 									HWND hwnd1;
 									int i;
-									hwnd1 = GetHWnd(); // »ñÈ¡µ±Ç°´°¿Ú¾ä±ú
-									// ½«±äÁ¿Öµ¸ñÊ½»¯Ð´Èëµ½ÖÐ¼ä±äÁ¿ s ÖÐ£¬ _T("")ÊÇ unicode µÄÓÃ·¨
-									i = MessageBox(hwnd1, _T("È·¶¨Òª·µ»ØÖ÷½çÃæÂð£¿"), _T("·µ»Ø"), MB_OKCANCEL | MB_ICONQUESTION);
+									hwnd1 = GetHWnd(); // èŽ·å–å½“å‰çª—å£å¥æŸ„
+									// å°†å˜é‡å€¼æ ¼å¼åŒ–å†™å…¥åˆ°ä¸­é—´å˜é‡ s ä¸­ï¼Œ _T("")æ˜¯ unicode çš„ç”¨æ³•
+									i = MessageBox(hwnd1, _T("ç¡®å®šè¦è¿”å›žä¸»ç•Œé¢å—ï¼Ÿ"), _T("è¿”å›ž"), MB_OKCANCEL | MB_ICONQUESTION);
 									if (i == 1)
 									{
-										ifGameUIChooseBack = true;		//Ñ¡ÔñÁË·µ»Ø
-										shap.gameoverChooseFlag = 2;		//Í¬Ê±Ò²±íÊ¾ÁËÓÎÏ·½áÊø£¬ËùÒÔ¸³ÖµÎª2£¬²ÅÄÜÌø³öÑ­»·2
-										graphdefaults();		//ÒòÎªÔÚÓÎÏ·½çÃæÊ±£¬¸ü¸ÄÁË×ø±êÔ­µã£¬·µ»ØÖ÷½çÃæÊ±£¬Òª»Ö¸´×ø±êÔ­µã
+										ifGameUIChooseBack = true;		//é€‰æ‹©äº†è¿”å›ž
+										shap.gameoverChooseFlag = 2;		//åŒæ—¶ä¹Ÿè¡¨ç¤ºäº†æ¸¸æˆç»“æŸï¼Œæ‰€ä»¥èµ‹å€¼ä¸º2ï¼Œæ‰èƒ½è·³å‡ºå¾ªçŽ¯2
+										graphdefaults();		//å› ä¸ºåœ¨æ¸¸æˆç•Œé¢æ—¶ï¼Œæ›´æ”¹äº†åæ ‡åŽŸç‚¹ï¼Œè¿”å›žä¸»ç•Œé¢æ—¶ï¼Œè¦æ¢å¤åæ ‡åŽŸç‚¹
 										break;
 									}
 									else if (i == 2)
 									{
 									}
 								}
-								//×¢£»ÉÏÏÂ×óÓÒ¶ÔÓ¦µÄch ·Ö±ðÎª£º72£¬ 80,75,77£¬AWDS ¶ÔÓ¦µÄ ASCIIÂë·Ö±ðÎª£º97,119,100£¬115
+								//æ³¨ï¼›ä¸Šä¸‹å·¦å³å¯¹åº”çš„ch åˆ†åˆ«ä¸ºï¼š72ï¼Œ 80,75,77ï¼ŒAWDS å¯¹åº”çš„ ASCIIç åˆ†åˆ«ä¸ºï¼š97,119,100ï¼Œ115
 							}
 							Sleep(80);
 						}
@@ -310,11 +310,11 @@ int main(void)
 
 					}
 
-					//µ±¸ÃgameoverChoosegflagÎª 2 Ê±£¬±íÊ¾Ñ¡ÔñÁË·µ»Ø£¨·µ»ØÖ÷½çÃæ£©
+					//å½“è¯¥gameoverChoosegflagä¸º 2 æ—¶ï¼Œè¡¨ç¤ºé€‰æ‹©äº†è¿”å›žï¼ˆè¿”å›žä¸»ç•Œé¢ï¼‰
 					if (shap.gameoverChooseFlag == 2)
 					{
 						cout << "`11111111```````" << endl;
-						break;		//Ìø³öÑ­»·2
+						break;		//è·³å‡ºå¾ªçŽ¯2
 					}
 				}
 			}
