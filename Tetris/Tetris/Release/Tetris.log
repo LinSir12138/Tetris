@@ -1,0 +1,21 @@
+﻿  Background.cpp
+  main.cpp
+  Shap.cpp
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(232): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(233): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(234): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(235): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(271): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(272): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(273): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(274): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(652): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(653): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(654): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(655): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(846): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+d:\visual stdio 2017\c++\俄罗斯方块小游戏（终极版）\tetris\tetris\shap.cpp(1333): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码
+  All 259 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Tetris.vcxproj -> D:\Visual Stdio 2017\C++\俄罗斯方块小游戏（终极版）\Tetris\Release\Tetris.exe
